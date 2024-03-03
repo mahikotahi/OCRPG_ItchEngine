@@ -20,6 +20,7 @@
 
 	<assets path='include/CHANGELOG.txt' rename='imp_CHANGELOG.txt' />
 	<assets path='include/README.txt' rename='imp_README.txt' />
+	<assets path='gitVersion.txt' rename='version.txt' />
 
 	<assets path='moddingsupport' rename='modding' embed='false'/>
 

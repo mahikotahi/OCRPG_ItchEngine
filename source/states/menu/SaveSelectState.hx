@@ -27,9 +27,11 @@ class SaveSelectState extends OcrpgState
 		persistentUpdate = true;
 
 		#if !debug
-		if(!SaveData.seenInstructions){
-			super.switchState(new InstructionState(), 'none', 0, false, 0);
-			return;
+		if (!SaveData.seenInstructions)
+		{
+			// keep this in mind!
+			//super.switchState(new InstructionState(), 'none', 0, false, 0);
+			//return;
 		}
 		#end
 

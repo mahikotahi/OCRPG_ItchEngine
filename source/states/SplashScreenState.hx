@@ -7,6 +7,8 @@ class SplashScreenState extends OcrpgState
 
 	override public function create()
 	{
+		super.init('fade', 1, 'custom', 'Starting the Game...', 'Game by Happy Campers');
+
 		logo = new FlxSprite().loadGraphic(Paths.image('introSplashScreen/companyLogo', 'misc'));
 		logo.setGraphicSize(Std.int(logo.width * .4));
 		logo.updateHitbox();
@@ -16,7 +18,7 @@ class SplashScreenState extends OcrpgState
 		logo.alpha = 0;
 		add(logo);
 
-		text = new FlxText(0, logo.y - 100, 0, "A Game by Happy Campers", 54);
+		text = new FlxText(0, logo.y - 100, 0, "Game by Happy Campers", 54);
 		text.setFormat(Paths.font("andy", 'global'), 54, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		text.antialiasing = SaveData.settings.get('antiAliasing');
 		text.screenCenter(X);
@@ -31,14 +33,14 @@ class SplashScreenState extends OcrpgState
 		var fadeIn:ScreenTransition = new ScreenTransition('fade', 'in', 2);
 		add(fadeIn);
 
-		super.switchState(new SaveSelectState(), 'fade', 1, false, 5.5);
+		super.switchState(new MainMenuState(), 'fade', 1, false, 5.5);
 
-		new FlxTimer().start(4, function(tmr:FlxTimer)
+		new FlxTimer().start(2, function(tmr:FlxTimer)
 		{
 			FlxTween.tween(logo, {alpha: 0}, 1, {ease: FlxEase.cubeInOut});
 			FlxTween.tween(text, {alpha: 0}, 1, {ease: FlxEase.cubeInOut});
 		});
 
-		super.init('fade', 1, 'custom', 'Starting the Game...', 'A Game by Happy Campers');
+		super.create();
 	}
 }

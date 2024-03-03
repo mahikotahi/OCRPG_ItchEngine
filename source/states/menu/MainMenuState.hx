@@ -70,7 +70,7 @@ class MainMenuState extends OcrpgState
 		versionText.antialiasing = SaveData.settings.get('antiAliasing');
 		add(versionText);
 
-		engineText = new FlxText(0, 0, FlxG.width, 'Itch Engine ' + Main.itchEngineVersionString);
+		engineText = new FlxText(0, 0, FlxG.width, 'Itch Engine ' + Utilities.dataFromTextFile('version'));
 		engineText.setFormat(Paths.font("andy", 'global'), 15, FlxColor.WHITE, CENTER);
 		engineText.setPosition(versionText.x,versionText.y - versionText.height - 5);
 		engineText.cameras = [camMain];
