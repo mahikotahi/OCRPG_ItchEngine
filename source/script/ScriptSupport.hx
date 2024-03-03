@@ -1,5 +1,7 @@
 package script;
 
+import flixel.sound.FlxSound;
+
 class ScriptSupport {
 
 	public static var playStated:PlayState = null;

@@ -1,5 +1,7 @@
 package states.menu;
 
+import flixel.sound.FlxSound;
+
 class SoundTestState extends OcrpgState
 {
 	var bg:MenuBackground;

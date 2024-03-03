@@ -1,5 +1,7 @@
 package substates;
 
+import flixel.sound.FlxSound;
+
 class PauseSubstate extends OcrpgSubState
 {
 	var camHud:FlxCamera;
