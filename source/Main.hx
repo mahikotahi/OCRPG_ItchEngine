@@ -8,6 +8,7 @@ class Main extends Sprite
 	public static var saveIndicator:SaveIndicator;
 
 	public static var versionString:String = 'Public Demo 1 (V: 1.0.0)';
+	public static var itchEngineVersionString:String = 'March Prototype';
 	
 	public function new()
 	{

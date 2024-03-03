@@ -17,6 +17,7 @@ class MainMenuState extends OcrpgState
 	var descriptionText:FlxText;
 
 	var versionText:FlxText;
+	var engineText:FlxText;
 
 	var textDataArray:Array<String>;
 	var smallTextDataArray:Array<String>;
@@ -68,6 +69,13 @@ class MainMenuState extends OcrpgState
 		versionText.cameras = [camMain];
 		versionText.antialiasing = SaveData.settings.get('antiAliasing');
 		add(versionText);
+
+		engineText = new FlxText(0, 0, FlxG.width, 'Itch Engine ' + Main.itchEngineVersionString);
+		engineText.setFormat(Paths.font("andy", 'global'), 15, FlxColor.WHITE, CENTER);
+		engineText.setPosition(versionText.x,versionText.y - versionText.height - 5);
+		engineText.cameras = [camMain];
+		engineText.antialiasing = SaveData.settings.get('antiAliasing');
+		add(engineText);
 
 		optionTexts = new FlxTypedGroup<MenuText>();
 		optionTexts.cameras = [camMain];
