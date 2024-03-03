@@ -25,7 +25,6 @@
 
 	<haxelib name="flixel" />
 	<haxelib name="flixel-addons" />
-	<haxelib name="discord_rpc" if="desktop"/>
 
 	<haxedef name="FLX_NO_TOUCH"/>
 	<haxedef name="FLX_NO_DEBUG" unless="debug" />

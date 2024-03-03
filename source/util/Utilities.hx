@@ -83,10 +83,10 @@ class Utilities
 	public static function changeGameDetails(?type:String = 'default', ?lineone:String, ?linetwo:String):Void{
 		switch(type){
 			case 'default':
-				DiscordClient.changePresence('In Game', null);
+				//DiscordClient.changePresence('In Game', null);
 				Application.current.window.title = 'OCRPG';
 			case 'custom':
-				DiscordClient.changePresence(lineone, linetwo);
+				//DiscordClient.changePresence(lineone, linetwo);
 				Application.current.window.title = 'OCRPG - ' + linetwo;
 		}
 	}

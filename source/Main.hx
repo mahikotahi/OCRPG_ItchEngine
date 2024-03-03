@@ -33,8 +33,6 @@ class Main extends Sprite
 		saveIndicator = new SaveIndicator();
 		addChild(saveIndicator);
 
-		DiscordClient.initialize();
-
 		SaveData.load();
 
 		SaveData.updateSetting('isFullscreen');

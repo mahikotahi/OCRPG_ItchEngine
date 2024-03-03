@@ -2,7 +2,6 @@ import Sys.sleep;
 import classes.Battle;
 import classes.Modding;
 import classes.SaveData;
-import discord_rpc.DiscordRpc;
 import flash.Lib;
 import flixel.FlxBasic;
 import flixel.FlxCamera;
@@ -112,7 +111,6 @@ import substates.QuickTimeEventSubstate;
 import sys.FileSystem;
 import sys.io.File;
 import util.Controls;
-import util.Discord.DiscordClient;
 import util.Paths;
 import util.Utilities;
 
